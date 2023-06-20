@@ -6,14 +6,21 @@
 </head>
 <body>
 
-    <button onclick="excgetRequest()" >excgetRequest</button>
+    <button onclick="excPostRequest()">excPostRequest</button>
 
     <script>
-        function excgetRequest(){
-        var URL="https://api.example.com/data";
-        var Configuration={method:"GET"};
+        
+        function excPostRequest(){
+        var URL="https://api.example.com/submit";
+        var bodyData={ "name": "John Doe", "email": "johndoe@example.com" };
 
-        fetch(URL,Configuration)
+
+        var Config={
+            method:'POST',
+            body:JSON.stringify(bodyData)
+        }
+
+        fetch(URL,Config)
         .then(response=>response.json())
         .then(result=>console.log(result))
         .catch(err=>console.log(err));    
