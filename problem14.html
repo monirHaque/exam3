@@ -1,0 +1,25 @@
+
+<html>
+<head>
+  <title>GET REQUEST </title>
+  
+</head>
+<body>
+    <script>
+
+        function excgetRequest(){
+        var URL="https://api.example.com/data";
+        var Configuration={method:"GET"};
+
+        fetch(URL,Configuration)
+        .then(response=>response.json())
+        .then(result=>console.log(result))
+        .catch(err=>console.log(err));    
+
+        
+        }       
+
+      </script>
+
+</body>
+</html>
