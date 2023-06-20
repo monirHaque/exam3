@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Text Color</title>
+  <style>
+    .red-text {
+      color: red;
+    }
+  </style>
+  <script>
+    function changeTextColor() {
+      var paragraphs = document.getElementsByClassName("red-text");
+      
+      for (var i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.color = "red";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Change Text Color</h1>
+  <p class="red-text" id="paragraph1">This paragraph should have red text color.</p>
+  <p class="red-text" id="paragraph2">This paragraph should also have red text color.</p>
+  <p id="paragraph3">This paragraph does not have the red-text class.</p>
+  
+  <button onclick="changeTextColor()">Change Text Color</button>
+</body>
+</html>
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webpage Functionality</title>
+  <style>
+    img {
+      width: 200px;
+      height: 200px;
+      transition: transform 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Common Js</h1>
+  <p>Click anywhere on the page to display the coordinates.</p>
+  <p>Press any key to display the key code.</p>
+  <img id="myImage" src="image1.jpg" alt="">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Click event handler
+      document.addEventListener("click", function(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        alert("Coordinates: (" + x + ", " + y + ")");
+      });
+
+      // Key press event handler
+      document.addEventListener("keydown", function(event) {
+        var keyCode = event.keyCode || event.which;
+        alert("Key Code: " + keyCode);
+      });
+
+      // Mouseover event handler
+      var image = document.getElementById("myImage");
+      image.addEventListener("mouseover", function() {
+        image.src = "image2.jpg";
+      });
+
+      // Mouseout event handler
+      image.addEventListener("mouseout", function() {
+        image.src = "image1.jpg";
+      });
+    });
+  </script>
+</body>
+</html>

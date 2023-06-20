@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Image</title>
+  <script>
+    function changeImageSource() {
+      var image = document.getElementById("myImage");
+      image.src = "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltfefac82fd2bdf465/645ce56b810ba39358495c4e/Goal_HIC_-_LinkedIn_(13).jpg?auto=webp&format=pjpg&width=1200&quality=60";
+    }
+  </script>
+</head>
+<body>
+  <h1>Change Image Source Example</h1>
+  <img id="myImage" src="https://fcb-abj-pre.s3.amazonaws.com/img/jugadors/MESSI.jpg" alt="Old Image">
+  <br>
+  <button onclick="changeImageSource()">Change Image</button>
+</body>
+</html>
